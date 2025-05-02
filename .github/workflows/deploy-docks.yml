@@ -5,11 +5,6 @@ on:
     branches:
       - master
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs: 
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -21,20 +16,13 @@ jobs:
         uses: actions/setup-node@v4
         with: 
           node-version: 18
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
 
       - run: npm run build
 
       - name: Deploy storybook
-        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         working-directory: ./packages/docs
-        path: storybook-static # default: dist/storybook
-        checkout: false # default: true
-
-
-
+        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH-TOKEN: ${{github.actor}}:${{secrets.GITHUB_TOKEN}}
