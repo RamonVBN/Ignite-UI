@@ -22,13 +22,14 @@ export default {
 export const Primary: StoryObj<TextInputProps> = {
     
     args: {
-        placeholder: 'Type your name '
+        placeholder: 'Type your name'
     }
 }
 
 export const WithPrefix: StoryObj<TextInputProps> = {
     args: {
-        prefix: 'cal.com/'
+        prefix: 'cal.com/',
+        placeholder: 'your-username'
     }
 }
 
