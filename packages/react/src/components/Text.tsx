@@ -35,4 +35,4 @@ export const Text = styled('p', {
 interface TextComponentProps extends ComponentProps<typeof Text> {}
 export interface TextProps extends VariantProps<TextComponentProps> {}
 
-// Text.displayName = 'Text'
+Text.displayName = 'Text'

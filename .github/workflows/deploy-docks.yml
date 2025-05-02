@@ -33,3 +33,7 @@ jobs:
           build_command: npm run build # default: npm run build-storybook
           path: ./packages/docs/storybook-static # default: dist/storybook
           checkout: false # default: true
+        
+        env:
+          TURBO_TOKEN: H3I1CsscAZYyS4taCh1VEmxW 
+          TURBO_TEAM: ramons-projects-518df958
