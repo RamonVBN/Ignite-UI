@@ -1,4 +1,4 @@
-import {colors} from '@ignite-ui/tokens'
+import {colors} from '@rignite-ui/tokens'
 import { getContrast } from 'polished'
 
 
