@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with: 
           node-version: 18
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
 
@@ -23,6 +25,9 @@ jobs:
 
       - name: Deploy storybook
         working-directory: ./packages/docs
-        run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+        run: touch storybook-static/.nojekyll npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
+
+
+
         env:
-          GH-TOKEN: ${{github.actor}}:${{secrets.GITHUB_TOKEN}}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
