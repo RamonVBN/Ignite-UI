@@ -37,5 +37,5 @@ jobs:
           checkout: false # default: true
         
         env:
-          TURBO_TOKEN: H3I1CsscAZYyS4taCh1VEmxW 
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }} 
           TURBO_TEAM: ramons-projects-518df958

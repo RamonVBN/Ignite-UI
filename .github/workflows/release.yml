@@ -33,5 +33,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          TURBO_TOKEN: H3I1CsscAZYyS4taCh1VEmxW 
+          TURBO_TOKEN:  ${{ secrets.VERCEL_TOKEN }}
           TURBO_TEAM: ramons-projects-518df958
