@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev:vite": "vite",
-    "build": "tsc -b && vite build",
+    "build:vite": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "dev": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "deploy-storybook": "storybook-to-ghpages"
+    "build": "storybook build",
+    "deploy-storybook": "storybook-to-ghpagesd"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^8.6.12",
