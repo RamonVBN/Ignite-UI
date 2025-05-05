@@ -13,6 +13,7 @@
     "deploy-storybook": "storybook-to-ghpagesd"
   },
   "dependencies": {
+    "@radix-ui/react-toast": "^1.2.11",
     "@storybook/addon-a11y": "^8.6.12",
     "phosphor-react": "^1.4.1",
     "polished": "^4.3.1",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
     "@eslint/js": "^9.22.0",
+    "@radix-ui/react-tooltip": "^1.2.4",
     "@rignite-ui/react": "*",
     "@rignite-ui/tokens": "*",
     "@rignite-ui/ts-config": "*",
